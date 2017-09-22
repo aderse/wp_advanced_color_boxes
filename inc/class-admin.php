@@ -16,11 +16,17 @@ class ACB_ADMIN {
 		if ( isset( $_POST['acb_wrapper_width'] ) ) {
 			update_option( 'acb_wrapper_width', $_POST['acb_wrapper_width'] );
 			$acb_wrapper_width = $_POST['acb_wrapper_width'];
-		}
+		} else {
+			$acb_wrapper_width = get_option( 'acb_wrapper_width', 'acb_options_group' );
+        }
+
 		if ( isset( $_POST['acb_box_height'] ) ) {
 			update_option( 'acb_box_height', $_POST['acb_box_height'] );
 			$acb_box_height = $_POST['acb_box_height'];
-		}
+		} else {
+			$acb_box_height = get_option( 'acb_box_height', 'acb_options_group' );
+        }
+
 		?>
 		<div class="wrap">
 			<h1>Advanced Color Fields</h1>

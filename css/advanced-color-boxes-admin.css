@@ -1,3 +1,7 @@
-table.acb-admin-form th {
+table.acb-admin-form tbody tr th {
     text-align: left;
+}
+
+table.acb-admin-form tbody tr td input {
+    text-align: right;
 }
