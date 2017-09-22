@@ -1,0 +1,27 @@
+.acb-box-outer-wrapper {
+    float: left;
+    font-size: 12px;
+    margin: 0 10px 20px 0;
+}
+
+.acb-box-wrapper {
+    border: 1px solid #000;
+}
+
+.acb-box {
+    margin: 5px;
+    width: calc( 100% - 10px );
+}
+
+.acb-text {
+    margin: 5px;
+    font-size: 12px;
+}
+
+.acb-clear-float {
+    clear: both;
+}
+
+table.acb-admin-form th {
+    text-align: left;
+}
