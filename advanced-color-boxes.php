@@ -32,6 +32,10 @@ function advanced_color_boxes_setup()
 	// BRING IN CUSTOM CSS AND JS
 	include( 'inc/class-enqueues.php' );
 	add_action( 'wp_enqueue_scripts', array( 'ACB_ENQUEUES', 'advanced_color_boxes_enqueue_scripts' ) );
+	if( is_admin() ) {
+		add_action( 'admin_head', array( 'ACB_ENQUEUES', 'advanced_color_boxes_enqueue_admin_scripts' ) );
+	}
+
 }
 
 // INIT

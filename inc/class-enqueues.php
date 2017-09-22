@@ -7,4 +7,7 @@ class ACB_ENQUEUES {
 	{
 		wp_enqueue_style( 'advanced-color-boxes-style', plugins_url( '/css/advanced-color-boxes.css' , dirname( __FILE__ ) ) );
 	}
+	public function advanced_color_boxes_enqueue_admin_scripts() {
+		wp_enqueue_style( 'advanced-color-boxes-style', plugins_url( '/css/advanced-color-boxes-admin.css' , dirname( __FILE__ ) ) );
+	}
 }

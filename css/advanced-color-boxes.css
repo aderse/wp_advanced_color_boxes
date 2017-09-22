@@ -21,7 +21,3 @@
 .acb-clear-float {
     clear: both;
 }
-
-table.acb-admin-form th {
-    text-align: left;
-}

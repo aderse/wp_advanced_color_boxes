@@ -1,5 +1,7 @@
 <?php
 
+defined( 'ABSPATH' ) or die( 'No script kiddies please!' );
+
 class ACB_ADMIN {
 	public function register_acb_settings() {
 		register_setting( 'acb_options_group', 'acb_wrapper_width' );
@@ -22,12 +24,12 @@ class ACB_ADMIN {
 		?>
 		<div class="wrap">
 			<h1>Advanced Color Fields</h1>
-			<table>
+			<table class="acb-admin-form">
 				<form method="post">
 					<?php settings_fields( 'acb_options_group' ); ?>
 					<?php do_settings_sections( 'acb_options_group' ); ?>
 					<tr>
-						<th style="text-align: left;">
+						<th>
 							<label for="acb-wrapper-width">Wrapper Width:</label>
 						</th>
 						<td>
@@ -36,7 +38,7 @@ class ACB_ADMIN {
 						</td>
 					</tr>
 					<tr>
-						<th style="text-align: left;">
+						<th>
 							<label for="acb-wrapper-height">Box Height:</label>
 						</th>
 						<td>
