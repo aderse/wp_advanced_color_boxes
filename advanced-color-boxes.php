@@ -13,15 +13,6 @@ License URI:  https://www.gnu.org/licenses/gpl-2.0.html
 
 defined( 'ABSPATH' ) or die( 'No script kiddies please!' );
 
-/**
- * Admin Page Section
- */
-if( is_admin() ) {
-	include( 'inc/class-admin.php' );
-	add_action( 'admin_menu', array( 'ACB_ADMIN', 'acb_admin_menu' ) );
-	add_action( 'admin_init', array( 'ACB_ADMIN', 'register_acb_settings' ) );
-}
-
 // SETUP
 add_action( 'plugins_loaded', 'advanced_color_boxes_setup' );
 
@@ -32,10 +23,14 @@ function advanced_color_boxes_setup()
 	// BRING IN CUSTOM CSS AND JS
 	include( 'inc/class-enqueues.php' );
 	add_action( 'wp_enqueue_scripts', array( 'ACB_ENQUEUES', 'advanced_color_boxes_enqueue_scripts' ) );
+
 	if( is_admin() ) {
 		add_action( 'admin_head', array( 'ACB_ENQUEUES', 'advanced_color_boxes_enqueue_admin_scripts' ) );
-	}
 
+		include( 'inc/class-admin.php' );
+		add_action( 'admin_menu', array( 'ACB_ADMIN', 'acb_admin_menu' ) );
+		add_action( 'admin_init', array( 'ACB_ADMIN', 'register_acb_settings' ) );
+	}
 }
 
 // INIT
@@ -48,11 +43,6 @@ function advanced_color_boxes_init()
 	include( 'inc/class-shortcodes.php' );
 	add_shortcode( 'ac_box', array('ACB_SHORTCODES','advanced_color_boxes_shortcode' ) );
 	add_shortcode( 'ac_box_clear', array( 'ACB_SHORTCODES','advanced_color_boxes_shortcode_clear_float' ) );
-}
-
-function advanced_color_boxes_enqueue_scripts()
-{
-	wp_enqueue_style( 'advanced-color-boxes-style', 'css/advanced-color-boxes.css' );
 }
 
 
