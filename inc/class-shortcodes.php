@@ -9,12 +9,12 @@ class ACB_SHORTCODES {
 		isset( $args['color'] ) ? $color = $args['color'] : $color = '#FFFFFF';
 		isset( $args['pre-text'] ) ? $pre_text = $args['pre-text'] : $pre_text = '' ;
 		isset( $args['post-text'] ) ? $post_text = $args['post-text'] : $post_text = '' ;
-		isset( $args['hex'] ) ? $hex = $args['hex'] : $hex = 'n' ;
-		isset( $args['rgb'] ) ? $rgb = $args['rgb'] : $rgb = 'n' ;
-		isset( $args['pan'] ) ? $pan = $args['pan'] : $pan = 'n' ;
-		isset( $args['pantone'] ) ? $pantone = $args['pantone'] : $pantone = '' ;
+		isset( $args['field1'] ) ? $field1 = $args['field1'] : $field1 = '' ;
+		isset( $args['field2'] ) ? $field2 = $args['field2'] : $field2 = '' ;
+		isset( $args['field3'] ) ? $field3 = $args['field3'] : $field3 = '' ;
+		isset( $args['field4'] ) ? $field4 = $args['field4'] : $field4 = '' ;
 
-		advanced_color_boxes( $color, $pre_text, $post_text, $hex, $rgb, $pan, $pantone );
+		advanced_color_boxes( $color, $pre_text, $post_text, $field1, $field2, $field3, $field4 );
 
 		$output = ob_get_contents();
 		ob_end_clean();

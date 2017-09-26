@@ -46,7 +46,7 @@ function advanced_color_boxes_init()
 }
 
 
-function advanced_color_boxes( $color, $pre_text, $post_text, $hex, $rgb, $pan, $pantone )
+function advanced_color_boxes( $color, $pre_text, $post_text, $field1, $field2, $field3, $field4 )
 {
 	$color = trim( str_replace("#", "", $color)  );
 

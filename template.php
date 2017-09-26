@@ -9,15 +9,17 @@
 			<?php if( '' != $pre_text ) { ?>
 				<div><strong><?php echo $pre_text; ?></strong></div>
 			<?php } ;?>
-			<?php if( 'y' == $hex ) { ?>
-				<div>Hex: <?php echo '#' . $color; ?></div>
+			<?php if( $field1 ) { ?>
+				<div><?php echo $field1; ?></div>
 			<?php } ;?>
-			<?php if( 'y' == $rgb ) { ?>
-				<?php list($r, $g, $b) = sscanf('#'.$color, "#%02x%02x%02x"); ?>
-				<div>RGB: <?php echo "$r $g $b";?></div>
+			<?php if( $field2 ) { ?>
+				<div><?php echo $field2 ;?></div>
 			<?php } ;?>
-			<?php if( 'y' == $pan ) { ?>
-				<div>Pantone: <?php echo $pantone; ?></div>
+			<?php if( $field3 ) { ?>
+				<div><?php echo $field3; ?></div>
+			<?php } ;?>
+			<?php if( $field4 ) { ?>
+                <div><?php echo $field4; ?></div>
 			<?php } ;?>
 		</div>
 	</div>
