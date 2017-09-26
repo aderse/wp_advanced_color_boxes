@@ -7,7 +7,7 @@
 		<div class="acb-box" style="background-color: #<?php echo $color; ?>; height: <?php echo $acb_box_height;?>px;"></div>
 		<div class="acb-text">
 			<?php if( '' != $pre_text ) { ?>
-				<div><?php echo $pre_text; ?></div>
+				<div><strong><?php echo $pre_text; ?></strong></div>
 			<?php } ;?>
 			<?php if( 'y' == $hex ) { ?>
 				<div>Hex: <?php echo '#' . $color; ?></div>
