@@ -2,7 +2,7 @@
 
 /*
 Plugin Name:  Advanced Color Box
-Plugin URI:   https://colorwerx.com/
+Plugin URI:   https://colorwerx.net/
 Description:  Advanced Color Box
 Version:      1.0.3
 Author:       Andrew Derse
