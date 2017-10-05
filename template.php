@@ -24,6 +24,6 @@
 		</div>
 	</div>
 	<?php if( '' != $post_text ) { ?>
-		<div style="padding-left: 6px;"><?php echo $post_text; ?></div>
+		<div style="padding-left: 6px; width:<?php echo $acb_wrapper_width;?>px;"><?php echo $post_text; ?></div>
 	<?php } ;?>
 </div>
