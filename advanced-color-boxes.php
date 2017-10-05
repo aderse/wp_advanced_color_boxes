@@ -43,6 +43,8 @@ function advanced_color_boxes_init()
 	include( 'inc/class-shortcodes.php' );
 	add_shortcode( 'ac_box', array('ACB_SHORTCODES','advanced_color_boxes_shortcode' ) );
 	add_shortcode( 'ac_box_clear', array( 'ACB_SHORTCODES','advanced_color_boxes_shortcode_clear_float' ) );
+	add_shortcode( 'ac_box_open', array( 'ACB_SHORTCODES','advanced_color_boxes_shortcode_open' ) );
+	add_shortcode( 'ac_box_close', array( 'ACB_SHORTCODES','advanced_color_boxes_shortcode_close' ) );
 }
 
 

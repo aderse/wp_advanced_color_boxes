@@ -28,4 +28,20 @@ class ACB_SHORTCODES {
 		ob_end_clean();
 		return $output;
 	}
+
+	public function advanced_color_boxes_shortcode_open() {
+		ob_start();
+		$output = ob_get_contents();
+		$output .= "<div class='acb-outer-wrapper'>";
+		ob_end_clean();
+		return $output;
+	}
+
+	public function advanced_color_boxes_shortcode_close() {
+		ob_start();
+		$output = ob_get_contents();
+		$output .= "</div>";
+		ob_end_clean();
+		return $output;
+	}
 }
